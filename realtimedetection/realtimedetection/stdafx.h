@@ -33,9 +33,11 @@
 
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
+// import OpenCV
 
-
-
+#include <iostream>
+#include <vector>
+#include <string>
 
 
 

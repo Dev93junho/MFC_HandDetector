@@ -1,4 +1,4 @@
-//Microsoft Visual C++ generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -16,19 +16,25 @@
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
-#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
 
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE
+2 TEXTINCLUDE 
 BEGIN
     "#ifndef APSTUDIO_INVOKED\r\n"
     "#include ""targetver.h""\r\n"
@@ -38,7 +44,7 @@ BEGIN
     "\0"
 END
 
-3 TEXTINCLUDE
+3 TEXTINCLUDE 
 BEGIN
     "#define _AFX_NO_OLE_RESOURCES\r\n"
     "#define _AFX_NO_TRACKER_RESOURCES\r\n"
@@ -57,17 +63,71 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 482
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOGEX 0, 0, 489, 300
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,373,279,50,14
+    PUSHBUTTON      "취소",IDCANCEL,432,279,50,14
+    CONTROL         "",IDC_PICTURE,"Static",SS_BLACKFRAME,17,7,456,272
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 영어(미국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // Icon
 //
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\realtimedetection.ico"
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
-IDR_MAINFRAME           ICON         "res\\realtimedetection.ico"
-IDR_rtdetectionTYPE         ICON         "res\\realtimedetectionDoc.ico"
-#endif
+IDR_rtdetectionTYPE     ICON                    "res\\realtimedetectionDoc.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -75,6 +135,7 @@ IDR_rtdetectionTYPE         ICON         "res\\realtimedetectionDoc.ico"
 //
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -96,9 +157,6 @@ BEGIN
 END
 
 
-#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE 9, 1
-
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
@@ -112,7 +170,7 @@ BEGIN
         MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
         MENUITEM "&Close",                      ID_FILE_CLOSE
         MENUITEM SEPARATOR
-        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1,GRAYED
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "E&xit",                       ID_APP_EXIT
     END
@@ -122,24 +180,24 @@ BEGIN
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         POPUP "&Application Look"
         BEGIN
-            MENUITEM "Windows &2000",           ID_VIEW_APPLOOK_WIN_2000
-            MENUITEM "Office &XP",              ID_VIEW_APPLOOK_OFF_XP
-            MENUITEM "&Windows XP",             ID_VIEW_APPLOOK_WIN_XP
-            MENUITEM "Office 200&3",            ID_VIEW_APPLOOK_OFF_2003
-            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
-            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",         ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",         ID_VIEW_APPLOOK_VS_2008
             POPUP "Office 200&7"
             BEGIN
-                MENUITEM "&Blue Style",         ID_VIEW_APPLOOK_OFF_2007_BLUE
-                MENUITEM "B&lack Style",        ID_VIEW_APPLOOK_OFF_2007_BLACK
-                MENUITEM "&Silver Style",       ID_VIEW_APPLOOK_OFF_2007_SILVER
-                MENUITEM "&Aqua Style",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
             END
         END
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About realtimedetection...",          ID_APP_ABOUT
+        MENUITEM "&About realtimedetection...", ID_APP_ABOUT
     END
 END
 
@@ -153,7 +211,7 @@ BEGIN
         MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
         MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
         MENUITEM SEPARATOR
-        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1,GRAYED
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
         MENUITEM "E&xit",                       ID_APP_EXIT
     END
@@ -171,18 +229,18 @@ BEGIN
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         POPUP "&Application Look"
         BEGIN
-            MENUITEM "Windows &2000",           ID_VIEW_APPLOOK_WIN_2000
-            MENUITEM "Office &XP",              ID_VIEW_APPLOOK_OFF_XP
-            MENUITEM "&Windows XP",             ID_VIEW_APPLOOK_WIN_XP
-            MENUITEM "Office 200&3",            ID_VIEW_APPLOOK_OFF_2003
-            MENUITEM "Visual Studio 200&5",     ID_VIEW_APPLOOK_VS_2005
-            MENUITEM "Visual Studio 200&8",     ID_VIEW_APPLOOK_VS_2008
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio 200&5",         ID_VIEW_APPLOOK_VS_2005
+            MENUITEM "Visual Studio 200&8",         ID_VIEW_APPLOOK_VS_2008
             POPUP "Office 200&7"
             BEGIN
-                MENUITEM "&Blue Style",         ID_VIEW_APPLOOK_OFF_2007_BLUE
-                MENUITEM "B&lack Style",        ID_VIEW_APPLOOK_OFF_2007_BLACK
-                MENUITEM "&Silver Style",       ID_VIEW_APPLOOK_OFF_2007_SILVER
-                MENUITEM "&Aqua Style",         ID_VIEW_APPLOOK_OFF_2007_AQUA
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
             END
         END
     END
@@ -195,21 +253,19 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
-        MENUITEM "&About realtimedetection...",          ID_APP_ABOUT
+        MENUITEM "&About realtimedetection...", ID_APP_ABOUT
     END
 END
 
-
-
-
 IDR_THEME_MENU MENU
 BEGIN
-    MENUITEM "Office 2007 (&Blue Style)",       ID_VIEW_APPLOOK_OFF_2007_BLUE
-    MENUITEM "Office 2007 (B&lack Style)",      ID_VIEW_APPLOOK_OFF_2007_BLACK
-    MENUITEM "Office 2007 (&Silver Style)",     ID_VIEW_APPLOOK_OFF_2007_SILVER
-    MENUITEM "Office 2007 (&Aqua Style)",       ID_VIEW_APPLOOK_OFF_2007_AQUA
-    MENUITEM "Win&dows 7",                      ID_VIEW_APPLOOK_WINDOWS_7
+    MENUITEM "Office 2007 (&Blue Style)",   ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007 (B&lack Style)",  ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (&Silver Style)", ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (&Aqua Style)",   ID_VIEW_APPLOOK_OFF_2007_AQUA
+    MENUITEM "Win&dows 7",                  ID_VIEW_APPLOOK_WINDOWS_7
 END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -218,40 +274,20 @@ END
 
 IDR_MAINFRAME ACCELERATORS
 BEGIN
-    "N",            ID_FILE_NEW,            VIRTKEY,CONTROL
-    "O",            ID_FILE_OPEN,           VIRTKEY,CONTROL
-    "S",            ID_FILE_SAVE,           VIRTKEY,CONTROL
-	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL
-	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL
-	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL
-	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL
-    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT
-    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT
-    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL
-    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT
-    VK_F6,          ID_NEXT_PANE,           VIRTKEY
-    VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
 END
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Dialog
-//
-
-IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "About realtimedetection"
-FONT 8, "MS Shell Dlg"
-BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "realtimedetection, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2022",IDC_STATIC,42,26,114,8
-    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
-END
-
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -259,18 +295,18 @@ END
 // Version
 //
 
-VS_VERSION_INFO     VERSIONINFO
-  FILEVERSION       1,0,0,1
-  PRODUCTVERSION    1,0,0,1
- FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
- FILEFLAGS VS_FF_DEBUG
+ FILEFLAGS 0x1L
 #else
  FILEFLAGS 0x0L
 #endif
- FILEOS VOS_NT_WINDOWS32
- FILETYPE VFT_APP
- FILESUBTYPE VFT2_UNKNOWN
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
@@ -278,37 +314,20 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "TODO: <Company name>"
             VALUE "FileDescription", "realtimedetection"
-            VALUE "FileVersion",     "1.0.0.1"
-            VALUE "InternalName",    "realtimedetection.exe"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "realtimedetection.exe"
             VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
-            VALUE "OriginalFilename","realtimedetection.exe"
+            VALUE "OriginalFilename", "realtimedetection.exe"
             VALUE "ProductName", "TODO: <Product name>"
-            VALUE "ProductVersion",  "1.0.0.1"
+            VALUE "ProductVersion", "1.0.0.1"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x0409, 1200
+        VALUE "Translation", 0x409, 1200
     END
 END
 
-/////////////////////////////////////////////////////////////////////////////
-//
-// DESIGNINFO
-//
-
-#ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO
-BEGIN
-    IDD_ABOUTBOX, DIALOG
-    BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 163
-        TOPMARGIN, 7
-        BOTTOMMARGIN, 55
-    END
-END
-#endif    // APSTUDIO_INVOKED
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -317,19 +336,21 @@ END
 
 STRINGTABLE
 BEGIN
-    IDP_OLE_INIT_FAILED       "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
 END
+
 STRINGTABLE
 BEGIN
-// Non-mac-targeting apps remove the two extra substrings
     IDR_MAINFRAME           "realtimedetection"
-    IDR_rtdetectionTYPE         "\nrtdetection\nrtdetection\n\n\nrealtimedetection.Document\nrealtimedetection.Document"
+    IDR_rtdetectionTYPE     "\nrtdetection\nrtdetection\n\n\nrealtimedetection.Document\nrealtimedetection.Document"
 END
+
 STRINGTABLE
 BEGIN
     AFX_IDS_APP_TITLE       "realtimedetection"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
+
 STRINGTABLE
 BEGIN
     ID_INDICATOR_EXT        "EXT"
@@ -339,6 +360,7 @@ BEGIN
     ID_INDICATOR_OVR        "OVR"
     ID_INDICATOR_REC        "REC"
 END
+
 STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Create a new document\nNew"
@@ -346,8 +368,16 @@ BEGIN
     ID_FILE_CLOSE           "Close the active document\nClose"
     ID_FILE_SAVE            "Save the active document\nSave"
     ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE
+BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
     ID_FILE_MRU_FILE1       "Open this document"
     ID_FILE_MRU_FILE2       "Open this document"
     ID_FILE_MRU_FILE3       "Open this document"
@@ -364,14 +394,26 @@ BEGIN
     ID_FILE_MRU_FILE14      "Open this document"
     ID_FILE_MRU_FILE15      "Open this document"
     ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
     ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
     ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
     ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
     ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
     ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
     ID_EDIT_CLEAR           "Erase the selection\nErase"
     ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
     ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
@@ -383,6 +425,10 @@ BEGIN
     ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
     ID_EDIT_UNDO            "Undo the last action\nUndo"
     ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
     ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
     ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
 END
@@ -396,27 +442,35 @@ BEGIN
     AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
     AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
     AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
     AFX_IDS_SCRESTORE       "Restore the window to normal size"
     AFX_IDS_SCTASKLIST      "Activate Task List"
     AFX_IDS_MDICHILD        "Activate this window"
 END
 
+#endif    // 영어(미국) resources
+/////////////////////////////////////////////////////////////////////////////
 
-#endif
+
 
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
-
 #define _AFX_NO_OLE_RESOURCES
 #define _AFX_NO_TRACKER_RESOURCES
 #define _AFX_NO_PROPERTY_RESOURCES
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE 9, 1
-#include "res\\realtimedetection.rc2"  // non-Microsoft Visual C++ edited resources
+#include "res\realtimedetection.rc2"  // non-Microsoft Visual C++ edited resources
 #include "afxres.rc"      // Standard components
 #endif
+
+/////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+
