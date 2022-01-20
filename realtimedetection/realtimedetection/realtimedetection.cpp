@@ -20,7 +20,7 @@
 // CrealtimedetectionApp
 
 BEGIN_MESSAGE_MAP(CrealtimedetectionApp, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CrealtimedetectionApp::OnAppAbout)
+	// ON_COMMAND(ID_APP_ABOUT, &CrealtimedetectionApp::OnAppAbout)
 	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
@@ -143,7 +143,7 @@ int CrealtimedetectionApp::ExitInstance()
 
 // CrealtimedetectionApp message handlers
 
-
+/*
 // CAboutDlg dialog used for App About
 
 class CAboutDlg : public CDialogEx
@@ -193,3 +193,4 @@ void CAboutDlg::OnBnClickedOk()
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	CDialogEx::OnOK();
 }
+*/
