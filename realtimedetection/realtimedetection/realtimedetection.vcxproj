@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="detection.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="realtimedetection.h" />
     <ClInclude Include="realtimedetectionDoc.h" />
@@ -196,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="detection.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="realtimedetection.cpp" />
     <ClCompile Include="realtimedetectionDoc.cpp" />
