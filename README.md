@@ -1,1 +1,0 @@
-HandDetector project for Study

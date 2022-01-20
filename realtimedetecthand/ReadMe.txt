@@ -1,75 +1,41 @@
 ﻿================================================================================
-    MFC 라이브러리 : HandDetector 프로젝트 개요
+    MFC 라이브러리 : realtimedetecthand 프로젝트 개요
 ===============================================================================
 
-응용 프로그램 마법사에서 이 HandDetector 응용 프로그램을 만들었습니다. 이 응용 프로그램은 MFC의 기본 사용법을 보여 줄 뿐만 아니라 응용 프로그램을 작성하기 위한 기본 구조를 제공합니다.
+응용 프로그램 마법사에서 이 realtimedetecthand 응용 프로그램을 만들었습니다. 이 응용 프로그램은 MFC의 기본 사용법을 보여 줄 뿐만 아니라 응용 프로그램을 작성하기 위한 기본 구조를 제공합니다.
 
-HandDetector 응용 프로그램을 구성하는 각 파일에 대한
+realtimedetecthand 응용 프로그램을 구성하는 각 파일에 대한
 요약 설명이 포함되어 있습니다.
 
-HandDetector.vcxproj
+realtimedetecthand.vcxproj
     응용 프로그램 마법사를 사용하여 생성한 VC++ 프로젝트의 기본 프로젝트 파일입니다. 파일을 생성한 Visual C++ 버전에 대한 정보와 응용 프로그램 마법사를 사용하여 선택한 플랫폼, 구성 및 프로젝트 기능에 대한 정보가 포함되어 있습니다.
 
-HandDetector.vcxproj.filters
+realtimedetecthand.vcxproj.filters
     응용 프로그램 마법사를 사용하여 생성된 VC++ 프로젝트의 필터 파일입니다. 이 파일에는 프로젝트의 파일과 필터 간의 연결 정보가 들어 있습니다. 이러한 연결은 특정 노드에서 유사한 확장명으로 그룹화된 파일을 표시하기 위해 IDE에서 사용됩니다. 예를 들어 ".cpp" 파일은 "소스 파일" 필터와 연결되어 있습니다.
 
-HandDetector.h
+realtimedetecthand.h
     해당 응용 프로그램의 기본 헤더 파일입니다.
-    여기에는 resource.h를 비롯한 다른 프로젝트별 헤더가 포함되어 있으며 CHandDetectorApp 응용 프로그램 클래스가 선언되어 있습니다.
+    여기에는 resource.h를 비롯한 다른 프로젝트별 헤더가 포함되어 있으며 CrealtimedetecthandApp 응용 프로그램 클래스가 선언되어 있습니다.
 
-HandDetector.cpp
-    이는 응용 프로그램 클래스 CHandDetectorApp가 포함된 기본 응용 프로그램 소스 파일입니다.
+realtimedetecthand.cpp
+    이는 응용 프로그램 클래스 CrealtimedetecthandApp가 포함된 기본 응용 프로그램 소스 파일입니다.
 
-HandDetector.rc
+realtimedetecthand.rc
     프로그램에서 사용하는 모든 Microsoft Windows 리소스의 목록입니다. 여기에는 RES 하위 디렉터리에 저장된 아이콘, 비트맵 및 커서가 포함됩니다. 이 파일은 Microsoft Visual C++에서 직접 편집할 수 있습니다. 프로젝트 리소스는 1042에 있습니다.
 
-res\HandDetector.ico
-    아이콘 파일이며, 응용 프로그램의 아이콘으로 사용됩니다. 이 아이콘은 기본 리소스 파일인 HandDetector.rc에 의해 포함됩니다.
+res\realtimedetecthand.ico
+    아이콘 파일이며, 응용 프로그램의 아이콘으로 사용됩니다. 이 아이콘은 기본 리소스 파일인 realtimedetecthand.rc에 의해 포함됩니다.
 
-res\HandDetector.rc2
+res\realtimedetecthand.rc2
     이 파일에는 Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스가 포함되어 있습니다. 리소스 편집기로 편집할 수 없는 모든 리소스는 이 파일에 넣어야 합니다.
 
-HandDetector.reg
-    프레임워크에서 설정될 등록 설정의 유형을 보여 주는 예제 .reg 파일입니다. 이 파일을 .reg 파일로 사용하여
-    응용 프로그램과 함께 사용하거나 또는 이를 삭제하고 기본값인 RegisterShellFileTypes 등록을 사용할 수 있습니다.
-
-HandDetector.idl
-    이 파일에는 응용 프로그램의 형식 라이브러리에 대한 인터페이스 정의 언어 소스 코드가 포함되어 있습니다.
 
 /////////////////////////////////////////////////////////////////////////////
 
-주 프레임 창:
-    표준 MFC 인터페이스가 포함됩니다.
+응용 프로그램 마법사에서 대화 상자 클래스 하나를 만듭니다.
 
-MainFrm.h, MainFrm.cpp
-    이 파일에는 프레임 클래스인 CMainFrame가 포함되어 있습니다.
-    이는 CMDIFrameWnd에서 파생되었으며 모든 MDI 프레임 기능을 제어합니다.
-
-res\Toolbar.bmp
-    이 비트맵 파일은 도구 모음의 바둑판식 이미지를 만드는 데 사용됩니다.
-    초기 도구 모음과 상태 표시줄은 CMainFrame 클래스에서 생성됩니다. 이 도구 모음 비트맵을 리소스 편집기로 편집하고, HandDetector.rc의 IDR_MAINFRAME TOOLBAR 배열을 업데이트하여 도구 모음 단추를 추가합니다.
-/////////////////////////////////////////////////////////////////////////////
-
-자식 프레임 창:
-
-ChildFrm.h, ChildFrm.cpp
-    이 파일은 MDI 응용 프로그램에서 자식 창을 지원하는 CChildFrame 클래스를 정의하고 구현합니다.
-
-/////////////////////////////////////////////////////////////////////////////
-
-응용 프로그램 마법사에서 문서 형식과 뷰를 한 개씩 만듭니다.
-
-HandDetectorDoc.h, HandDetectorDoc.cpp - 문서
-    이 파일에는 CHandDetectorDoc 클래스가 포함됩니다. 이 파일을 편집하여 특수 문서 데이터를 추가하고 CHandDetectorDoc::Serialize를 통해 파일 저장 및 로드를 구현합니다.
-
-HandDetectorView.h, HandDetectorView.cpp - 문서 뷰
-    이 파일에는 CHandDetectorView 클래스가 포함됩니다.
-    CHandDetectorView 개체는 CHandDetectorDoc 개체를 보는 데 사용됩니다.
-
-res\HandDetectorDoc.ico
-    아이콘 파일이며, CHandDetectorDoc 클래스 MDII 자식 창의 아이콘으로 사용됩니다. 이 아이콘은 기본 리소스 파일인 HandDetector.rc에 의해 포함됩니다.
-
-
+realtimedetecthandDlg.h, realtimedetecthandDlg.cpp - 대화 상자
+    이 파일에는 CrealtimedetecthandDlg 클래스가 포함됩니다. 이 클래스는 응용 프로그램의 주 대화 상자에 대한 동작을 정의합니다. 이 대화 상자 템플릿은 realtimedetecthand.rc에 있으며, Microsoft Visual C++에서 직접 편집할 수 있습니다.
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -83,12 +49,12 @@ Windows 소켓
 기타 표준 파일:
 
 StdAfx.h, StdAfx.cpp
-    이 파일은 미리 컴파일된 헤더(PCH) 파일 HandDetector.pch와 미리 컴파일된 형식(PCT) 파일 StdAfx.obj를 빌드하는 데 사용됩니다.
+    이 파일은 미리 컴파일된 헤더(PCH) 파일 realtimedetecthand.pch와 미리 컴파일된 형식(PCT) 파일 StdAfx.obj를 빌드하는 데 사용됩니다.
 
 Resource.h
     새 리소스 ID를 정의하는 표준 헤더 파일입니다. Microsoft Visual C++에서 이 파일을 읽고 업데이트합니다.
 
-HandDetector.manifest
+realtimedetecthand.manifest
 	응용 프로그램 매니페스트 파일은 Windows XP에서 특정 버전의 Side-by-Side 어셈블리에 대한 응용 프로그램 종속성을 설명하는 데 사용됩니다. 로더는 이 정보를 통해 어셈블리 캐시 또는 응용 프로그램의 private에서 적절한 어셈블리를 로드합니다. 응용 프로그램 매니페스트는 응용 프로그램 실행 파일과 같은 폴더에 설치된 외부 .manifest 파일 형태로서 재배포용으로 포함되거나, 리소스 형태로 된 실행 파일에 포함될 수 있습니다.
 /////////////////////////////////////////////////////////////////////////////
 
