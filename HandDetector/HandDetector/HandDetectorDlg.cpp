@@ -118,7 +118,7 @@ void CHandDetectorDlg::OnTimer(UINT_PTR nIDEvent)
 	capture->read(mat_frame);
 
 	// Convert to Gray scale image
-	cvtColor(mat_frame, mat_frame, COLOR_BGR2GRAY);
+	//cvtColor(mat_frame, mat_frame, COLOR_BGR2GRAY);
 
 	// On the Display
 	int bpp = 8 * mat_frame.elemSize();
@@ -172,9 +172,7 @@ void CHandDetectorDlg::OnTimer(UINT_PTR nIDEvent)
 	bitInfo -> bmiHeader.biSizeImage = 0;
 	bitInfo -> bmiHeader.biXPelsPerMeter = 0;
 	bitInfo -> bmiHeader.biYPelsPerMeter = 0;
-
-
-	//그레이스케일 인경우 팔레트가 필요
+	
 	if (bpp == 8)
 	{
 		RGBQUAD* palette = bitInfo -> bmiColors;
