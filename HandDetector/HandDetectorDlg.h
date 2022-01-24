@@ -7,6 +7,9 @@
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
+using namespace std;
+
+
 
 // CHandDetectorDlg 대화 상자
 class CHandDetectorDlg : public CDialogEx

@@ -6,10 +6,13 @@
 #include "HandDetector.h"
 #include "HandDetectorDlg.h"
 
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
+using namespace cv;
+using namespace std;
 
 // CHandDetectorApp
 
