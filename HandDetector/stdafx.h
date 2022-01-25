@@ -40,8 +40,7 @@
 #include "opencv2/highgui.hpp"
 #include "opencv2/imgproc.hpp"
 #include "opencv2/objdetect.hpp"
-
-#include "tiny_dnn/tiny_dnn.h"
+#include "opencv2/dnn.hpp"
 
 #ifdef _UNICODE
 #if defined _M_IX86

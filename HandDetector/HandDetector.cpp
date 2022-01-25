@@ -14,6 +14,8 @@
 using namespace cv;
 using namespace std;
 
+
+
 // CHandDetectorApp
 
 BEGIN_MESSAGE_MAP(CHandDetectorApp, CWinApp)
