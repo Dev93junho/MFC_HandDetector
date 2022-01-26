@@ -352,3 +352,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#temp proj files
+HandDetector/SelectRoi.cpp
