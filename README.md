@@ -1,2 +1,2 @@
 # Hand Detector Project
-- Build On Visual Studio 2015
+- Build On Visual Studio 2017
