@@ -11,7 +11,6 @@
 #define new DEBUG_NEW
 #endif
 
-
 // CHandDetectorDlg 대화 상자
 
 CHandDetectorDlg::CHandDetectorDlg(CWnd* pParent /*=NULL*/)
