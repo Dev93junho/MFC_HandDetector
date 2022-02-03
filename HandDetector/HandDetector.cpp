@@ -15,7 +15,7 @@ using namespace cv;
 using namespace std;
 
 
-
+/*
 int main(int, char) {
 	//Declaration and at the same time created
 	Mat mtx(3, 3, CV_32F); //make the 3 x 3, 32bit, floating-point Matrix
@@ -31,6 +31,14 @@ int main(int, char) {
 
 }
 
+*/
+
+/*
+
+int main(int, char)
+{
+
+}
 
 // CHandDetectorApp
 
