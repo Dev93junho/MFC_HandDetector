@@ -193,6 +193,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="box.h" />
+    <ClInclude Include="cnn.h" />
     <ClInclude Include="HandDetector.h" />
     <ClInclude Include="HandDetectorDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -200,6 +202,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="box.cpp" />
     <ClCompile Include="HandDetector.cpp" />
     <ClCompile Include="HandDetectorDlg.cpp" />
     <ClCompile Include="stdafx.cpp">

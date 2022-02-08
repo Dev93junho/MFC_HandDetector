@@ -33,12 +33,6 @@ int main(int, char) {
 
 */
 
-
-int main(int, char)
-{
-
-}
-
 // CHandDetectorApp
 
 BEGIN_MESSAGE_MAP(CHandDetectorApp, CWinApp)

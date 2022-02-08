@@ -41,6 +41,8 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/objdetect.hpp"
 #include "opencv2/dnn.hpp"
+#include "box.h"
+
 
 #ifdef _UNICODE
 #if defined _M_IX86
