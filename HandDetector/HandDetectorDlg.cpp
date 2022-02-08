@@ -164,6 +164,27 @@ int getFingerPosition(vector<Point>max_contour, Mat img_result,
 		return -1;
 
 	// detect finger tip using Convexity Defects
+	vector<cv::Point> point2;
+	for (int j = 0; j < defects.size(); j++)
+	{
+		cv::Point start = approx[defects[j][0]];
+		cv::Point end = approx[defects[j][1]];
+		cv::Point far = approx[defects[j][2]];
+		int d = defects[j][3];
+
+		double angle = calculateAngle(
+			cv::Point(start.x - far.x, start.y - far.y),
+			cv::Point(end.x - far.x, end.y - far.y));
+
+		if (angle > 0 && angle < 45 && d > 10000)
+		{
+			if (start.y < cy)
+				points2.push_back(start);
+
+			if (end.y < cy)
+				points2.push_back(end);
+		}
+	}
 }
 
 
