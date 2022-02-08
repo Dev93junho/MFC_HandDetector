@@ -6,6 +6,11 @@
 #include "HandDetector.h"
 #include "HandDetectorDlg.h"
 #include "afxdialogex.h"
+#include <iostream>
+
+
+using namespace cv;
+using namespace std;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -31,6 +36,135 @@ BEGIN_MESSAGE_MAP(CHandDetectorDlg, CDialogEx)
 	ON_WM_DESTROY()
 	ON_WM_TIMER()
 END_MESSAGE_MAP()
+
+
+int detect(Mat img, CascadeClassifier face_cascade, Rect &face)
+{
+	vector<Rect>faces;
+
+	face_cascade.detectMultiScale(img, faces, 1.1, 5, CASCADE_SCALE_IMAGE, Size(30, 30));
+
+	if (faces.size() == 0)
+		return -1;
+	else
+	{
+		face = faces[0];
+
+		return 0;
+	}
+}
+
+int findFaceArea(Mat img, CascadeClassifier face_cascade, Rect &face)
+{
+	Mat img_gray;
+	cvtColor(img, img_gray, COLOR_BGR2GRAY);
+	equalizeHist(img_gray, img_gray);
+	int ret = detect(img, face_cascade, face);
+
+	return ret;
+}
+
+int findMaxArea(vector<vector<cv::Point>> contours)
+{
+	int max_area = -1;
+	int max_index = -1;
+
+	for (int i; i < contours.size(); i++)
+	{
+
+		int area = contourArea(contours[i]);
+		Rect rect = boundingRect(contours[i]);
+
+		if ((rect.width*rect.height)*0.4 > area)
+			continue;
+
+		if (rect.width > rect.height)
+			continue;
+
+		if (area > max_area) {
+			max_area = area;
+			max_index = i;
+		}
+	}
+
+	if (max_area < 10000)
+		max_index = -1;
+	return max_index;
+}
+
+double calculateAngle(Point A, Point B)
+{
+	double dot = A.x*B.x + A.y*B.y;
+	double det = A.x*B.y + A.y*B.x;
+	double angle = atan2(det, dot) * 180 / CV_PI;
+
+	return angle;
+}
+
+double distanceBetweenTwoPoints(Point start, Point end)
+{
+	int x1 = start.x;
+	int y1 = start.y;
+	int x2 = end.x;
+	int y2 = end.y;
+
+	return (int)(sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2)));
+}
+
+bool sort_custum(const cv::Point p1, const cv::Point p2)
+{
+	return((p1.x + p1.y) < (p2.x + p2.y));
+}
+
+int getFingerPosition(vector<Point>max_contour, Mat img_result,
+	vector<cv::Point> &new_points, bool debug)
+{
+	// find max_contour centor of gravity 
+	vector<cv::Point> points1;
+
+	Moments M;
+	M = moments(max_contour);
+
+	int cx = (int)(M.m10 / M.m00);
+	int cy = (int)(M.m01 / M.m00);
+
+	// approximate contour
+	vector<cv::Point> approx;
+	approxPolyDP(Mat(max_contour), approx,
+		arcLength(Mat(max_contour), true)*0.02, true);
+
+	// convex hull
+	vector<cv::Point> hull;
+	convexHull(Mat(approx), hull, true);
+
+	// save the finger tip to convexHull points
+	// Use to recognize one finger
+	for (int i; i < hull.size(); i++)
+		if (cy > hull[i].y)
+			points1.push_back(hull[i]);
+
+	if (debug)
+	{
+		vector<vector<cv::Point>>result;
+		result.push_back(hull);
+		drawContours(img_result, result, -1, Scalar(0, 255, 0), 2);
+
+		for (int i; i < points1.size(); i++)
+			circle(img_result, points1[i], 15, Scalar(0, 0, 0), -1);
+	}
+
+	// Convexity Defects
+	vector<int>hull2;
+	convexHull(Mat(approx), hull2, false);
+
+	vector<Vec4i> defects;
+	convexityDefects(approx, hull2, defects);
+
+	if (defects.size() == 0)
+		return -1;
+
+	// detect finger tip using Convexity Defects
+}
 
 
 // CHandDetectorDlg 메시지 처리기
