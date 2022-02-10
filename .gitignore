@@ -355,3 +355,6 @@ MigrationBackup/
 
 #temp proj files
 HandDetector/SelectRoi.cpp
+
+#python node_modules
+.venv
