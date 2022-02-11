@@ -358,3 +358,4 @@ HandDetector/SelectRoi.cpp
 
 #python node_modules
 .venv
+venv
